@@ -8,7 +8,7 @@ I've thoroughly enjoyed learning Elixir over the past few years and find the fun
 
 I've only broken production a couple of times and hardly anyone noticed, but don't worry! I'll hit my quota eventually.  
 
-Also Me: [LinkedIn](https://www.linkedin.com/in/samuel-reep/) | [Tips About Recursion](https://www.github.com/sareep)
+Also Me: [LinkedIn](https://www.linkedin.com/in/samuel-reep/) | [Exercism](https://exercism.org/profiles/sareep) | [Tips About Recursion](https://www.github.com/sareep)
 
 <!---
 sareep/sareep is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

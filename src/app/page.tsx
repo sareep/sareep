@@ -1,12 +1,12 @@
 import { Card, Grid, Typography } from "@mui/material";
 import Header from "./header";
 
-const MENU_OPTIONS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact", href: "/contact" },
-];
+// const MENU_OPTIONS = [
+//   { label: "Home", href: "/" },
+//   { label: "About", href: "/about" },
+//   { label: "Projects", href: "/projects" },
+//   { label: "Contact", href: "/contact" },
+// ];
 
 const COLUMN_WIDTHS = {
   left: 3,

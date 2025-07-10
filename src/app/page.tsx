@@ -1,5 +1,8 @@
 import { Card, Grid, Typography } from "@mui/material";
+import { ABOUT_ME } from "./consts";
 import Header from "./header";
+import Headshot from "./headshot";
+import Links from "./links";
 
 // const MENU_OPTIONS = [
 //   { label: "Home", href: "/" },
@@ -41,40 +44,21 @@ export default function Home() {
     <main>
       <Header />
       <Grid container py={1} mx={2} spacing={2}>
+        {renderColumnGridItem(<Headshot />, "left", true)}
         {renderColumnGridItem(
-          <div>
-            <img
-              alt="Sam Reep"
-              src="/headshot.jpeg"
-              style={{
-                aspectRatio: "210 / 195",
-                maxWidth: "100%",
-                borderRadius: "50%",
-                overflow: "hidden",
-              }}
-            />
-          </div>,
-          "left",
-          true
-        )}
-        {renderColumnGridItem(
-          <Typography variant="body1" gutterBottom>
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <Typography
+            variant="body1"
+            gutterBottom
+            sx={{ textAlign: "justify" }}
+          >
+            {ABOUT_ME}
           </Typography>,
           "right"
         )}
       </Grid>
       <Grid container py={1} mx={2} spacing={2}>
         {renderColumnGridItem(
-          <Typography variant="h4" gutterBottom>
-            Quick Links
-          </Typography>,
+          <Links />, 
           "left"
         )}
         {renderColumnGridItem(

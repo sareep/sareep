@@ -9,7 +9,15 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import NextLink from "next/link";
 import { useState } from "react";
+
+const MENU_OPTIONS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -63,9 +71,11 @@ export default function Header() {
           open={open}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+          {MENU_OPTIONS.map((option) => (
+            <NextLink key={option.label} href={option.href} passHref>
+              <MenuItem>{option.label}</MenuItem>
+            </NextLink>
+          ))}
         </Menu>
       </Toolbar>
     </AppBar>

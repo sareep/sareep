@@ -4,13 +4,6 @@ import Header from "./header";
 import Headshot from "./headshot";
 import Links from "./links";
 
-// const MENU_OPTIONS = [
-//   { label: "Home", href: "/" },
-//   { label: "About", href: "/about" },
-//   { label: "Projects", href: "/projects" },
-//   { label: "Contact", href: "/contact" },
-// ];
-
 const COLUMN_WIDTHS = {
   left: 3,
   right: 9,

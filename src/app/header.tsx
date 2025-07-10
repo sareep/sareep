@@ -24,15 +24,13 @@ export default function Header() {
   return (
     <AppBar
       position="sticky"
-      // elevation={3}
       sx={{
         width: "97.5%",
         m: 2,
         borderRadius: 4,
         boxSizing: "border-box",
-        overflow: "visible",
         backgroundColor: "background.header",
-        color: "text.primary",
+        color: "text.header",
       }}
     >
       <Toolbar

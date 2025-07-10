@@ -1,3 +1,5 @@
+"use client";
+
 import { Grid, List, ListItem, Typography } from "@mui/material";
 
 export default function Links() {

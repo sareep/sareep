@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Headshot() {
@@ -13,8 +15,9 @@ export default function Headshot() {
     >
       <Image
         alt="Sam Reep"
-        src="/headshot.jpeg"
-        fill
+        src="/sareep/headshot.jpeg"
+        width={250}
+        height={250}
         style={{ objectFit: "cover" }}
       />
     </div>

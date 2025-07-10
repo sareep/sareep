@@ -1,4 +1,6 @@
-export const ABOUT_ME = `Hello!
+export const DISCLAIMER = `NOTE - I am actively building this site so if you've stumbled over here, please excuse the mess :)`;
+
+export const ABOUT_ME = `Hi, I'm Sam!
 
 I'm a full stack engineer with experience primarily around B2B tools and big data.
 I've been coding professionally since 2020, and studied Data Analytics + Computer Science in college before that.

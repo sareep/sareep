@@ -1,23 +1,22 @@
-import { Card, Grid, Typography } from "@mui/material";
-import { ABOUT_ME, DISCLAIMER } from "./consts";
+import { Card, Grid } from "@mui/material";
+import AboutMe from "./aboutMe";
 import Header from "./header";
 import Headshot from "./headshot";
 import Links from "./links";
 
-const COLUMN_WIDTHS = {
-  left: 4,
-  right: 8,
+const GRID_WIDTHS = {
+  left: { sm: 4, md: 3, lg: 2 },
+  right: { sm: 8, md: 9, lg: 10 },
 };
 
 function renderColumnGridItem(
   children: React.ReactNode,
-  side: keyof typeof COLUMN_WIDTHS,
-  noCard: boolean = false
+  side: keyof typeof GRID_WIDTHS,
+  withCard: boolean = true
 ) {
   return (
     <Grid
-      container
-      size={COLUMN_WIDTHS[side]}
+      size={GRID_WIDTHS[side]}
       alignContent={"center"}
       justifyContent={"center"}
     >
@@ -37,27 +36,8 @@ export default function Home() {
     <main>
       <Header />
       <Grid container py={1} mx={2} spacing={2}>
-        {renderColumnGridItem(<Headshot />, "left", true)}
-        {renderColumnGridItem(
-          <>
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
-              About Me
-            </Typography>
-            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              {DISCLAIMER}
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                textAlign: "justify",
-                whiteSpace: "pre-line",
-              }}
-            >
-              {ABOUT_ME}
-            </Typography>
-          </>,
-          "right"
-        )}
+        {renderColumnGridItem(<Headshot />, "left", false)}
+        {renderColumnGridItem(<AboutMe />, "right")}
       </Grid>
       <Grid container py={1} mx={2} spacing={2}>
         {renderColumnGridItem(<Links />, "left")}

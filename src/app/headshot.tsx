@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 
-const DIAMETER = 300;
 
 export default function Headshot() {
   return (
@@ -10,17 +9,19 @@ export default function Headshot() {
       style={{
         borderRadius: "50%",
         overflow: "hidden",
-        width: DIAMETER,
-        height: DIAMETER,
+        width: "100%",
+        maxWidth: 300,
+        aspectRatio: "1 / 1",
+        margin: "0 auto",
         position: "relative",
       }}
     >
       <Image
         alt="Sam Reep"
         src="/sareep/headshot.jpeg"
-        width={DIAMETER}
-        height={DIAMETER}
+        fill
         style={{ objectFit: "cover" }}
+        sizes="(max-width: 300px) 100vw, 300px"
       />
     </div>
   );

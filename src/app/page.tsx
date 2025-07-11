@@ -5,8 +5,8 @@ import Headshot from "./headshot";
 import Links from "./links";
 
 const GRID_WIDTHS = {
-  left: { xs: 12, sm: 4, md: 3, lg: 3 },
-  right: { xs: 12, sm: 8, md: 9, lg: 9 },
+  left: { xs: 12, sm: 12, md: 3, lg: 3 },
+  right: { xs: 12, sm: 12, md: 9, lg: 9 },
 };
 
 function renderColumnGridItem(
@@ -44,7 +44,9 @@ function renderColumnGridItem(
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Box sx={{ pt: 12, alignContent: "center", justifyContent: "center" }}>
+        <Header />
+      </Box>
       <Grid container py={1} mx={2} spacing={2}>
         {renderColumnGridItem(<Headshot />, "left", false)}
         {renderColumnGridItem(<AboutMe />, "right")}

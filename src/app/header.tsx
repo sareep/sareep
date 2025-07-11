@@ -31,9 +31,11 @@ export default function Header() {
 
   return (
     <AppBar
-      position="sticky"
+      position="fixed"
       sx={{
-        width: "97.5%",
+        width: "90%",
+        left: "5%",
+        right: "5%",
         m: 2,
         borderRadius: 4,
         boxSizing: "border-box",

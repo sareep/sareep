@@ -1,12 +1,12 @@
-import { Card, Grid } from "@mui/material";
+import { Box, Card, Grid } from "@mui/material";
 import AboutMe from "./aboutMe";
 import Header from "./header";
 import Headshot from "./headshot";
 import Links from "./links";
 
 const GRID_WIDTHS = {
-  left: { sm: 4, md: 3, lg: 2 },
-  right: { sm: 8, md: 9, lg: 10 },
+  left: { xs: 12, sm: 4, md: 3, lg: 3 },
+  right: { xs: 12, sm: 8, md: 9, lg: 9 },
 };
 
 function renderColumnGridItem(
@@ -20,12 +20,22 @@ function renderColumnGridItem(
       alignContent={"center"}
       justifyContent={"center"}
     >
-      {noCard ? (
-        children
-      ) : (
+      {withCard ? (
         <Card variant="elevation" sx={{ p: 2, width: "100%", height: "100%" }}>
           {children}
         </Card>
+      ) : (
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {children}
+        </Box>
       )}
     </Grid>
   );

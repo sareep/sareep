@@ -1,6 +1,5 @@
 import { Box, Card, Grid } from "@mui/material";
 import AboutMe from "./aboutMe";
-import Header from "./header";
 import Headshot from "./headshot";
 import Links from "./links";
 
@@ -44,9 +43,6 @@ function renderColumnGridItem(
 export default function Home() {
   return (
     <main>
-      <Box sx={{ pt: 12, alignContent: "center", justifyContent: "center" }}>
-        <Header />
-      </Box>
       <Grid container py={1} mx={2} spacing={2}>
         {renderColumnGridItem(<Headshot />, "left", false)}
         {renderColumnGridItem(<AboutMe />, "right")}

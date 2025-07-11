@@ -14,8 +14,8 @@ import { useState } from "react";
 
 const MENU_OPTIONS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
+  // { label: "About", href: "/about" },
+  // { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -75,7 +75,7 @@ export default function Header() {
         >
           {MENU_OPTIONS.map((option) => (
             <NextLink key={option.label} href={option.href} passHref>
-              <MenuItem>{option.label}</MenuItem>
+              <MenuItem onClick={handleClose}>{option.label}</MenuItem>
             </NextLink>
           ))}
         </Menu>

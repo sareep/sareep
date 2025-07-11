@@ -2,6 +2,7 @@ import { Box, Card, Grid } from "@mui/material";
 import AboutMe from "./aboutMe";
 import Headshot from "./headshot";
 import Links from "./links";
+import Resume from "./resume";
 
 const GRID_WIDTHS = {
   left: { xs: 12, sm: 12, md: 3, lg: 3 },
@@ -49,7 +50,7 @@ export default function Home() {
       </Grid>
       <Grid container py={1} mx={2} spacing={2}>
         {renderColumnGridItem(<Links />, "left")}
-        {/* {renderColumnGridItem(<Resume />, "right")} */}
+        {renderColumnGridItem(<Resume />, "right")}
       </Grid>
     </main>
   );

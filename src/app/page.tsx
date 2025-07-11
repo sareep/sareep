@@ -49,13 +49,7 @@ export default function Home() {
       </Grid>
       <Grid container py={1} mx={2} spacing={2}>
         {renderColumnGridItem(<Links />, "left")}
-        {renderColumnGridItem(
-          <Grid size={8}>
-            {/* TODO */}
-            Resume Here
-          </Grid>,
-          "right"
-        )}
+        {/* {renderColumnGridItem(<Resume />, "right")} */}
       </Grid>
     </main>
   );

@@ -183,7 +183,6 @@ export default function PongGame() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>~Vibe~ Pong</h1>
       <canvas
         ref={canvasRef}
         id="pongCanvas"

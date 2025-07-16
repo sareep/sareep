@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-const DISCLAIMER = `NOTE - I am actively building this site so if you've stumbled over here, please excuse the mess :)`;
+const DISCLAIMER = `NOTE - I am actively building this site and am still in the early stages. Please excuse the mess :)`;
 
 const ABOUT_ME = `Hi, I'm Sam!
 

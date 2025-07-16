@@ -22,6 +22,13 @@ export default function ContactPage() {
       <CardContent>
       <Typography variant="h5" component="h1" gutterBottom>
         Send me a message.
+        <strong>
+          Note - This won&apos;t actually work, I haven&apos;t set up a mailer yet. Please reach out to me on{' '}
+          <a href="https://www.linkedin.com/in/samuel-reep" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          !
+        </strong>
       </Typography>
       {submitted ? (
         <Typography variant="body1">
